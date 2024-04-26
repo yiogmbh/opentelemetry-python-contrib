@@ -24,7 +24,7 @@ jobs:
         with:
           python-version: "3.10"
       - name: Install tox
-        run: pip install tox
+        run: pip install tox tox-uv
       - name: Install libsnappy-dev
         if: ${{ matrix.tox-environment == 'lint' }}
         run: sudo apt-get install -y libsnappy-dev
